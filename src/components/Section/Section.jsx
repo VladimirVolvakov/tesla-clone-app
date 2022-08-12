@@ -1,6 +1,11 @@
+// Styles:
+import { Wrapper } from "./Section.styles";
+
 const Section = () => {
   return (
-    <div>Section</div>
+    <Wrapper>
+      Section
+    </Wrapper>
   );
 };
 
