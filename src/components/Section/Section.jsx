@@ -1,5 +1,5 @@
 // Styles:
-import { ButtonGroup, LeftButton, RightButton, TextItem, Wrapper } from "./Section.styles";
+import { ButtonGroup, Buttons, DownArrow, LeftButton, RightButton, TextItem, Wrapper } from "./Section.styles";
 
 const Section = () => {
   return (
@@ -9,14 +9,17 @@ const Section = () => {
         <p>Order Online for Touchless Delivery</p>
       </TextItem>
 
-      <ButtonGroup>
-        <LeftButton>
-          Custom Order
-        </LeftButton>
-        <RightButton>
-          Existing Inventory
-        </RightButton>
-      </ButtonGroup>
+      <Buttons>
+        <ButtonGroup>
+          <LeftButton>
+            Custom Order
+          </LeftButton>
+          <RightButton>
+            Existing Inventory
+          </RightButton>
+        </ButtonGroup>
+        <DownArrow src="/images/down-arrow.svg" />
+      </Buttons>
     </Wrapper>
   );
 };
