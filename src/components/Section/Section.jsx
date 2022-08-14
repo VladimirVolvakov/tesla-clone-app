@@ -1,22 +1,26 @@
 // Styles:
 import { ButtonGroup, Buttons, DownArrow, LeftButton, RightButton, TextItem, Wrapper } from "./Section.styles";
 
-const Section = () => {
+const Section = ({title, description, backgroundImage, leftButtonText, rightButtonText}) => {
   return (
-    <Wrapper>
+    <Wrapper backgroundImage={backgroundImage}>
       <TextItem>
-        <h1>Model S</h1>
-        <p>Order Online for Touchless Delivery</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
       </TextItem>
 
       <Buttons>
         <ButtonGroup>
           <LeftButton>
-            Custom Order
+            {leftButtonText}
           </LeftButton>
-          <RightButton>
-            Existing Inventory
-          </RightButton>
+
+          { rightButtonText && (
+            <RightButton>
+              {rightButtonText}
+            </RightButton>
+          )}
+          
         </ButtonGroup>
         <DownArrow src="/images/down-arrow.svg" />
       </Buttons>
