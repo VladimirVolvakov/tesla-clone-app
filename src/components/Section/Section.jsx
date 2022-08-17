@@ -1,27 +1,33 @@
 // Styles:
 import { ButtonGroup, Buttons, DownArrow, LeftButton, RightButton, TextItem, Wrapper } from "./Section.styles";
+// Animation:
+import Fade from 'react-reveal/Fade';
 
 const Section = ({title, description, backgroundImage, leftButtonText, rightButtonText}) => {
   return (
     <Wrapper backgroundImage={backgroundImage}>
-      <TextItem>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </TextItem>
+      <Fade bottom>
+        <TextItem>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </TextItem>
+      </Fade>
 
       <Buttons>
-        <ButtonGroup>
-          <LeftButton>
-            {leftButtonText}
-          </LeftButton>
+        <Fade bottom>
+          <ButtonGroup>
+            <LeftButton>
+              {leftButtonText}
+            </LeftButton>
 
-          { rightButtonText && (
-            <RightButton>
-              {rightButtonText}
-            </RightButton>
-          )}
+            { rightButtonText && (
+              <RightButton>
+                {rightButtonText}
+              </RightButton>
+            )}
           
-        </ButtonGroup>
+          </ButtonGroup>
+        </Fade>
         <DownArrow src="/images/down-arrow.svg" />
       </Buttons>
     </Wrapper>
