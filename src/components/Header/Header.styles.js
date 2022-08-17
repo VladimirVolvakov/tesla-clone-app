@@ -1,48 +1,18 @@
 import styled from "styled-components";
 // Icon:
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from '@mui/icons-material/Close';
 
-export const Container = styled.div`
-	min-height: 60px;
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
-	display: flex;
-	align-items: center;
-  justify-content: space-between;
-	padding: 0 20px;
-`;
+export const Container = styled.div``;
 
-export const LeftMenu = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex: 1;
+export const LeftMenu = styled.div``;
 
-	a {
-		font-weight: 600;
-		text-transform: uppercase;
-		padding: 0 10px;
-		flex-wrap: nowrap;
-	}
+export const RightMenu = styled.div``;
 
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
+export const CustomMenu = styled(MenuIcon)``;
 
-export const RightMenu = styled.div`
-	display: flex;
-  align-items: center;
+export const BurgerMenu = styled.div``;
 
-	a {
-		font-weight: 600;
-		text-transform: uppercase;
-		margin-right: 10px;
-	}
-`;
+export const CustomCloseButton = styled(CloseIcon)``;
 
-export const CustomMenu = styled(MenuIcon)`
-  cursor: pointer;
-`;
+export const CloseButtonWrapper = styled.div``;
