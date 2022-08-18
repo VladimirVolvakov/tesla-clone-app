@@ -3,16 +3,82 @@ import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  min-height: 60px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 8;
+`;
 
-export const LeftMenu = styled.div``;
+export const LeftMenu = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 
-export const RightMenu = styled.div``;
+  a {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 10px;
+    flex-wrap: nowrap;
+  }
 
-export const CustomMenu = styled(MenuIcon)``;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
 
-export const BurgerMenu = styled.div``;
+export const RightMenu = styled.div`
+  display: flex;
+  align-items: center;
 
-export const CustomCloseButton = styled(CloseIcon)``;
+  a {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+`;
 
-export const CloseButtonWrapper = styled.div``;
+export const CustomMenu = styled(MenuIcon)`
+  cursor: pointer;
+`;
+
+export const BurgerMenu = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: white;
+  list-style: none;
+  width: 300px;
+  padding: 20px;
+  z-index: 10;
+
+  li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    a {
+      font-weight: 600;
+    }
+  }
+`;
+
+export const CustomCloseButton = styled(CloseIcon)`
+  cursor: pointer;
+`;
+
+export const CloseButtonWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 260px;
+`;
