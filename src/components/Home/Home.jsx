@@ -6,7 +6,7 @@ import { Container } from "./Home.styles";
 const Home = () => {
   return (
     <Container>
-      <Section 
+      <Section
         title="Model S" 
         description="Order Online for Touchless Delivery"
         backgroundImage="/images/model-s.jpg"
