@@ -1,7 +1,15 @@
 // Styles:
 import { Container, CustomMenu, LeftMenu, RightMenu, BurgerMenu, CustomCloseButton, CloseButtonWrapper } from "./Header.styles";
+// Hook:
+import { useState } from "react";
 
 const Header = () => {
+  const [isBurgerMenuOpened, setIsBurgerMenuOpened] = useState(false);
+
+  const openBurgerMenu = () => setIsBurgerMenuOpened(true);
+
+  const closeBurgerMenu = () => setIsBurgerMenuOpened(false);
+
   return (
     <Container>
       <a>
@@ -16,11 +24,11 @@ const Header = () => {
       <RightMenu>
         <a href="#">Shop</a>
         <a href="#">Tesla Account</a>
-        <CustomMenu />
+        <CustomMenu onClick={openBurgerMenu} />
       </RightMenu>
-      <BurgerMenu>
+      { isBurgerMenuOpened && (<BurgerMenu>
         <CloseButtonWrapper>
-          <CustomCloseButton />
+          <CustomCloseButton onClick={closeBurgerMenu} />
         </CloseButtonWrapper>
         <li><a href="#">Model S</a></li>
         <li><a href="#">Model Y</a></li>
@@ -33,7 +41,7 @@ const Header = () => {
         <li><a href="#">Trade-in</a></li>
         <li><a href="#">Cybertruck</a></li>
         <li><a href="#">Roadster</a></li>
-      </BurgerMenu> 
+      </BurgerMenu>) }
     </Container>
   );
 };
