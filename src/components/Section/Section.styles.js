@@ -15,6 +15,10 @@ export const Wrapper = styled.div`
 export const TextItem = styled.div`
   padding-top: 15vh;
   text-align: center;
+
+  h1 {
+    margin-bottom: 5px;
+  }
 `;
 
 export const ButtonGroup = styled.div`

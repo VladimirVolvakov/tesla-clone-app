@@ -1,14 +1,18 @@
 // Styles:
 import { Container, CustomMenu, LeftMenu, RightMenu, BurgerMenu, CustomCloseButton, CloseButtonWrapper } from "./Header.styles";
-// Hook:
+// Hooks:
 import { useState } from "react";
+import { useSelector } from "react-redux";
+// State:
+import { selectProduct } from "../../features/product/productSlice";
 
 const Header = () => {
   const [isBurgerMenuOpened, setIsBurgerMenuOpened] = useState(false);
 
   const openBurgerMenu = () => setIsBurgerMenuOpened(true);
-
   const closeBurgerMenu = () => setIsBurgerMenuOpened(false);
+
+  const products = useSelector(selectProduct);
 
   return (
     <Container>
@@ -16,10 +20,9 @@ const Header = () => {
         <img src="/images/logo.svg" alt="Tesla Logo" />
       </a>
       <LeftMenu>
-        <a href="#">Model S</a>
-        <a href="#">Model Y</a>
-        <a href="#">Model 3</a>
-        <a href="#">Model X</a>
+        { products && products.map((product, index) => (
+          <a href="#" key={index}>{product}</a>
+        )) }
       </LeftMenu>
       <RightMenu>
         <a href="#">Shop</a>
@@ -30,17 +33,17 @@ const Header = () => {
         <CloseButtonWrapper>
           <CustomCloseButton onClick={closeBurgerMenu} />
         </CloseButtonWrapper>
-        <li><a href="#">Model S</a></li>
-        <li><a href="#">Model Y</a></li>
-        <li><a href="#">Model 3</a></li>
-        <li><a href="#">Model X</a></li>
-        <li><a href="#">Solar Panels</a></li>
-        <li><a href="#">Solar Roofs</a></li>
+        { products && products.map((product, index) => (
+          <li><a href="#" key={index}>{product}</a></li>
+        )) }
         <li><a href="#">Accessories</a></li>
+        <li><a href="#">Existing Inventory</a></li>
         <li><a href="#">Used Inventory</a></li>
         <li><a href="#">Trade-in</a></li>
-        <li><a href="#">Cybertruck</a></li>
-        <li><a href="#">Roadster</a></li>
+        <li><a href="#">Charging</a></li>
+        <li><a href="#">Commercial Energy</a></li>
+        <li><a href="#">Utilities</a></li>
+        <li><a href="#">Test Drive</a></li>
       </BurgerMenu>) }
     </Container>
   );
