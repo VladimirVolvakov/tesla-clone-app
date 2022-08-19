@@ -25,7 +25,7 @@ export const LeftMenu = styled.div`
   a {
     font-weight: 600;
     text-transform: uppercase;
-    padding: 0 10px;
+    padding: 0 15px;
     flex-wrap: nowrap;
   }
 
@@ -41,7 +41,7 @@ export const RightMenu = styled.div`
   a {
     font-weight: 600;
     text-transform: uppercase;
-    margin-right: 10px;
+    margin-right: 15px;
   }
 `;
 

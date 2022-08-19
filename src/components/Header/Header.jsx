@@ -21,7 +21,7 @@ const Header = () => {
       </a>
       <LeftMenu>
         { products && products.map((product, index) => (
-          <a href="#" key={index}>{product}</a>
+          <a href={`#${product.sectionName}`} key={index}>{product.name}</a>
         )) }
       </LeftMenu>
       <RightMenu>
@@ -34,9 +34,8 @@ const Header = () => {
           <CustomCloseButton onClick={closeBurgerMenu} />
         </CloseButtonWrapper>
         { products && products.map((product, index) => (
-          <li><a href="#" key={index}>{product}</a></li>
+          <li><a href={`#${product.sectionName}`} key={index}>{product.name}</a></li>
         )) }
-        <li><a href="#">Accessories</a></li>
         <li><a href="#">Existing Inventory</a></li>
         <li><a href="#">Used Inventory</a></li>
         <li><a href="#">Trade-in</a></li>

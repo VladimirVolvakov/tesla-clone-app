@@ -57,6 +57,7 @@ export const RightButton = styled(LeftButton)`
 export const DownArrow = styled.img`
   height: 40px;
   animation: moveDown infinite 1.5s;
+  cursor: pointer;
 `;
 
 export const Buttons = styled.div``;

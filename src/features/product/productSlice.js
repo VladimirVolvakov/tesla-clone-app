@@ -2,7 +2,35 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  products: ["Model S", "Model Y", "Model 3", "Model X", "Solar Roof", "Solar Panels"]
+  products: [
+    {
+      name: "Model S",
+      sectionName: "model-s"
+    }, 
+    {
+      name: "Model Y",
+      sectionName: "model-y"
+    }, 
+    {
+      name: "Model 3",
+      sectionName: "model-3"
+    }, 
+    {
+      name: "Model X",
+      sectionName: "model-x"
+    }, 
+    {
+      name: "Solar Roof",
+      sectionName: "solar-roofs"
+    }, 
+    {
+      name: "Solar Panels",
+      sectionName: "solar-panels"
+    }, 
+    {
+      name: "Accessories",
+      sectionName: "accessories"
+    }]
 };
 
 const productSlice = createSlice({
