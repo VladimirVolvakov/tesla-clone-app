@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <Container>
-      <a>
+      <a href="#">
         <img src="/images/logo.svg" alt="Tesla Logo" />
       </a>
       <LeftMenu>

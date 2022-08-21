@@ -20,12 +20,12 @@ const initialState = {
       sectionName: "model-x"
     }, 
     {
-      name: "Solar Roof",
-      sectionName: "solar-roofs"
-    }, 
-    {
       name: "Solar Panels",
       sectionName: "solar-panels"
+    },
+    {
+      name: "Solar Roof",
+      sectionName: "solar-roofs"
     }, 
     {
       name: "Accessories",
