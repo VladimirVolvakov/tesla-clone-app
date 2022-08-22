@@ -3,7 +3,7 @@ import { ButtonGroup, Buttons, DownArrow, LeftButton, RightButton, TextItem, Wra
 // Animation:
 import Fade from "react-reveal/Fade";
 
-const Section = ({ id, title, description, backgroundImage, leftButtonText, rightButtonText }) => {
+const Section = ({ id, title, description, backgroundImage, leftButtonText, rightButtonText, downArrowLink }) => {
   return (
     <section id={id}>
       <Wrapper backgroundImage={backgroundImage}>
@@ -22,7 +22,9 @@ const Section = ({ id, title, description, backgroundImage, leftButtonText, righ
               {rightButtonText && <RightButton>{rightButtonText}</RightButton>}
             </ButtonGroup>
           </Fade>
-          <DownArrow src="/images/down-arrow.svg" />
+          <a href={downArrowLink}>
+            <DownArrow src="/images/down-arrow.svg" />
+          </a>
         </Buttons>
       </Wrapper>
     </section>

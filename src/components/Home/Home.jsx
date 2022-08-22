@@ -13,6 +13,7 @@ const Home = () => {
         backgroundImage="/images/model-s.jpg"
         leftButtonText="Custom Order"
         rightButtonText="Existing Inventory"
+        downArrowLink="#model-y"
       />
       <Section 
         id="model-y"
@@ -21,6 +22,7 @@ const Home = () => {
         backgroundImage="/images/model-y.jpg"
         leftButtonText="Custom Order"
         rightButtonText="Existing Inventory"
+        downArrowLink="#model-3"
       />
       <Section 
         id="model-3"
@@ -29,6 +31,7 @@ const Home = () => {
         backgroundImage="/images/model-3.jpg"
         leftButtonText="Custom Order"
         rightButtonText="Existing Inventory"
+        downArrowLink="#model-x"
       />
       <Section 
         id="model-x"
@@ -37,6 +40,7 @@ const Home = () => {
         backgroundImage="/images/model-x.jpg"
         leftButtonText="Custom Order"
         rightButtonText="Existing Inventory"
+        downArrowLink="#solar-panels"
       />
       <Section 
         id="solar-panels"
@@ -45,6 +49,7 @@ const Home = () => {
         backgroundImage="/images/solar-panel.jpg"
         leftButtonText="Order now"
         rightButtonText="Learn more"
+        downArrowLink="#solar-roofs"
       />
       <Section 
         id="solar-roofs"
@@ -53,6 +58,7 @@ const Home = () => {
         backgroundImage="/images/solar-roof.jpg"
         leftButtonText="Order now"
         rightButtonText="Learn more"
+        downArrowLink="#accessories"
       />
       <Section 
         id="accessories"
@@ -60,6 +66,7 @@ const Home = () => {
         description=""
         backgroundImage="/images/accessories.jpg"
         leftButtonText="Shop now"
+        downArrowLink="#model-s"
       />
     </Container>
   );
